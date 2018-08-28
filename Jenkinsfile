@@ -14,14 +14,7 @@ pipeline {
                 }
             }
         }
-            stage('Static Code Analysis, Unit Test and Coverage') {
             
-                steps {
-                    dir('edge') {
-                    bat "mvn test -Pproxy-unit-test "
-                }
-            }
-        }
 
             stage('Pre-Deployment Configuration - Caches') {
                 steps {
