@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="6" name="googleProxy1">
+    <Basepaths>/googleproxy1/v1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1531238219457</CreatedAt>
+    <CreatedBy>siddharths@sidgs.com</CreatedBy>
+    <Description>Google apigee training Day 1 proxy</Description>
+    <DisplayName>googleProxy1</DisplayName>
+    <LastModifiedAt>1531409389011</LastModifiedAt>
+    <LastModifiedBy>siddharths@sidgs.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:3573838a2313db0f2cc7d6681bfe2419f5cfb0f600a708d0d869147e13192a42b574057330398233fbe5803bc789a612e6849f6c9d44dbcdd404e1110fd60e9d</ManifestVersion>
+    <Policies>
+        <Policy>AM-QuotaViolation</Policy>
+        <Policy>AM-StripHeader</Policy>
+        <Policy>EV-FormattedAddr</Policy>
+        <Policy>EV-GetStoreInfo</Policy>
+        <Policy>FC-BasicAuth</Policy>
+        <Policy>JSMashup</Policy>
+        <Policy>JSON-ThreatProtection</Policy>
+        <Policy>MsgLogging</Policy>
+        <Policy>OAuth2-VFA</Policy>
+        <Policy>Quota-Violation</Policy>
+        <Policy>Quota</Policy>
+        <Policy>RC-TestCaching</Policy>
+        <Policy>SC-GoogleMaps</Policy>
+        <Policy>SpikeArrest</Policy>
+        <Policy>StatsCollector</Policy>
+        <Policy>VAPIK-Auth</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://mashup.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota async="false" continueOnError="false" enabled="true" type="calendar" name="Quota">
+    <DisplayName>Quota</DisplayName>
+    <Properties/>
+    <Allow count="2000" countRef="verifyapikey.VAPIK-Auth.apiproduct.developer.quota.limit"/>
+    <Interval ref="verifyapikey.VAPIK-Auth.apiproduct.developer.quota.interval">2</Interval>
+    <Distributed>true</Distributed>
+    <Synchronous>true</Synchronous>
+    <TimeUnit ref="verifyapikey.VAPIK-Auth.apiproduct.developer.quota.timeunit">minute</TimeUnit>
+    <StartTime>2018-7-11 12:00:00</StartTime>
+    <!-- <AsynchronousConfiguration>
+    </AsynchronousConfiguration> -->
+    <SyncIntervalInSeconds>20</SyncIntervalInSeconds>
+    <SyncMessageCount>5</SyncMessageCount>
+</Quota>

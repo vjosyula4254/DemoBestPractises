@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-GetStoreInfo">
+    <DisplayName>EV-GetStoreInfo</DisplayName>
+    <Properties/>
+    <URIPath name="name"/>
+    <QueryParam name="name"/>
+    <Header name="name"/>
+    <FormParam name="name"/>
+    <JSONPayload>
+        <Variable name="lat">
+            <JSONPath>$.entities[0].location.latitude</JSONPath>
+        </Variable>
+        <Variable name="long">
+            <JSONPath>$.entities[0].location.longitude</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">response</Source>
+</ExtractVariables>

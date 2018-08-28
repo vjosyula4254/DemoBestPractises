@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AM-QuotaViolation" version="SHA-512:aec9e0138b1d3284fc4c5a652f6ab44915ff0de5406ad2a8da0033f4ee9ba2f614f72eca296c1a33b046f0adb8333a7d7376267139f05406f088837a4944dbf1"/>
+        <VersionInfo resourceName="AM-StripHeader" version="SHA-512:e51dee0a924cbd78fa2bdbfcf56fb7748b840661005060bd836c52214703196573b70d821919401d50b9952c684df509de768f7199b2a6663bc7fac59160e703"/>
+        <VersionInfo resourceName="EV-FormattedAddr" version="SHA-512:ef43280b2731fb21ac7cec323c735874d4a024e45fdc898733861bc8d41188896170e2c005ded8fddc8123ca269ed2cfea36d661ad5ce8c8c21d49e0503a2af0"/>
+        <VersionInfo resourceName="EV-GetStoreInfo" version="SHA-512:68304bd7f511be926a661225a4afc74cc3c207b47303889a256db47183ac90c58ae84031b93e282c845abb187932f4ac9b47d1b09be07648397801c2c79178ed"/>
+        <VersionInfo resourceName="FC-BasicAuth" version="SHA-512:fb7f34587859d56fe042fa56f5f4d08aec571640caa5083913c7ab39177010689b678f4dd503f85f4f0ba3f65ca980d58e7dc0b3db94029b3a4cdda3d9e7fa77"/>
+        <VersionInfo resourceName="JSMashup" version="SHA-512:7553da0e3cc5845c6cfa1f2baa9643c40f444da1e9e0b646b6d13df34ca8ab322013fffd85ff21237207fe88e8983a412f4cbab3bc7128ac0cbacbb1a9951e83"/>
+        <VersionInfo resourceName="JSON-ThreatProtection" version="SHA-512:5e7e712b5ea55ce67e64a14f7b5a8134aba42c2ef3e9d9837fc2f95f3f72bbee6158dd4e6d52f2170f0bea3752ba59e27afee766c2a7c96055219fd19f923626"/>
+        <VersionInfo resourceName="MsgLogging" version="SHA-512:45cb10d9669ef069c5db73ba1dfff6933d89c7182202e86fdd05e36bc6e148503d9656815b37ffd80e2c105ac97d69e8ebffbd07bb5b80cff23b53d786b0258f"/>
+        <VersionInfo resourceName="OAuth2-VFA" version="SHA-512:839b1b1d10bdc4771484195e32e1e94d9b1cdb1a55ba2cc42b4cb6f7c6632cce5734c4518315b1111056d620548ec33786a656b8e64c27e9fd23732b0b80f5b1"/>
+        <VersionInfo resourceName="Quota" version="SHA-512:ba51d406b8ffd9e2b2c922ae4e28813dbb37a088eb8b6490b0fdea2ba55046d509076bfa8c6b3005e551a0f7d18739ef0668eb1e339e45b6a49f9670aff9857c"/>
+        <VersionInfo resourceName="Quota-Violation" version="SHA-512:7aa62be0935d7358e9d1052b7ea5e1e5b025c0daef016d772f2e23bccab81c710993ba8cdbaa649f2105ebe5c7be1232f35c2e16cd872017963a458e09f9393c"/>
+        <VersionInfo resourceName="RC-TestCaching" version="SHA-512:b7d9545e9b65978d2196de91aab4c739ce4f9319dbfe0c385e4001f36d8ac11b2842bc95179e1dbe16aab4dac6fddbcd12c45392ea6e3947c1529317d33f665c"/>
+        <VersionInfo resourceName="SC-GoogleMaps" version="SHA-512:83806c1dbd436c78b86b09e2c6ae86e4d98bd039cee9fd9ec1a31f49461cd54225718e4ecf1bd0096a129842ddfb1e3b50de39b9ec9a2f608d32f6c35332c7bf"/>
+        <VersionInfo resourceName="SpikeArrest" version="SHA-512:d83f9499b5a80eaa395d8cb49b26f7c66f03f902a3b237a1c45f062f78feb41e26230c9f20bf63985fdaaa996e0ec5bbb899280b255fc866f4f7f6421f94ab29"/>
+        <VersionInfo resourceName="StatsCollector" version="SHA-512:98d3e9249abdf0d72bac81c3ecc2a404a665b4fb31e3fd19f0b9430101c2c45ae034464a25660173398666f62575f780b8008b41576a33f4446f798d188dddfe"/>
+        <VersionInfo resourceName="VAPIK-Auth" version="SHA-512:d363473a79cb03b2c994ae396c99e7d27a66ca053a229e0b8411f291d0bb8c1ec6acac95cc9003d09dcbafd6c8b0ee77182d98a7f9e6f1f9435b47fd5e98d3e3"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:54d8fa70727b21a057fc054090d4589c274b2f63c1261276b349bc711f2d40e2332357226bbc4b392e3087c3f88bdfdbc91e3df6427cce41acc0f401a25a1a91"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://mashup.js" version="SHA-512:07990171d8dcec0f63f470b681e3ef616164feae0f27664ff07a2f7af129fab5f2bf7a96d209b396a73b1fc23e42b2303a79b4a45c3ff425a5a7e5e878b11113"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:48f3d1fbecdbda943fdac0464bdcbfc47ce85d9cb51a140dc8ec6e3572807915419654e6bf6b83e18f60636b7921f787ea09b4d73aa6847cd98a701aa162364a"/>
+    </TargetEndpoints>
+</Manifest>

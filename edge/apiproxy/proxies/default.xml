@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="QuotaViolation">
+            <Condition>fault.name=="QuotaViolation"</Condition>
+            <Step>
+                <Name>AM-QuotaViolation</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>SpikeArrest</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <PostClientFlow name="PostClientFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>MsgLogging</Name>
+            </Step>
+        </Response>
+    </PostClientFlow>
+    <Flows>
+        <Flow name="UpdateProduct">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>FC-BasicAuth</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/products/*") and (request.verb = "PUT")</Condition>
+        </Flow>
+        <Flow name="CreateProduct">
+            <Description>create new product</Description>
+            <Request>
+                <Step>
+                    <Name>JSON-ThreatProtection</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/products") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="GetStore">
+            <Description/>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>EV-GetStoreInfo</Name>
+                </Step>
+                <Step>
+                    <Condition>(lat != null) and (long != null)</Condition>
+                    <Name>SC-GoogleMaps</Name>
+                </Step>
+                <Step>
+                    <Name>EV-FormattedAddr</Name>
+                </Step>
+                <Step>
+                    <Name>JSMashup</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/stores/*") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="GetStores">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/stores") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="GetProducts">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>RC-TestCaching</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>RC-TestCaching</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/products") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="default">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>Quota-Violation</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/googleproxy1/v1</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

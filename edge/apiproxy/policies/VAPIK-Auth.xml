@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyAPIKey async="false" continueOnError="false" enabled="true" name="VAPIK-Auth">
+    <DisplayName>VAPIK-Auth</DisplayName>
+    <Properties/>
+    <APIKey ref="request.queryparam.apikey"/>
+</VerifyAPIKey>

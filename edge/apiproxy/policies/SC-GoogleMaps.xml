@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-GoogleMaps">
+    <DisplayName>SC-GoogleMaps</DisplayName>
+    <Properties/>
+    <Request>
+        <Set>
+            <QueryParams>
+                <QueryParam name="latlng">{lat},{long}</QueryParam>
+                <QueryParam name="key">AIzaSyDqJ0pP6MdA6AMPG0Vap48ez7lcUVaDp2k</QueryParam>
+            </QueryParams>
+        </Set>
+    </Request>
+    <Response>calloutResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://maps.googleapis.com/maps/api/geocode/json</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>
